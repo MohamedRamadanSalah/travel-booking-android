@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="215dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/white_bg"
+    android:elevation="3dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_placeImage"
+        android:layout_width="240dp"
+        android:layout_height="130dp"
+        android:layout_margin="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedCorner"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/tv_placeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="title"
+        android:textColor="@color/darkBlue"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_placeImage"
+        app:layout_constraintTop_toBottomOf="@+id/iv_placeImage" />
+
+    <TextView
+        android:id="@+id/tv_placePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="$0"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_placeTitle" />
+
+    <TextView
+        android:id="@+id/tv_pricePerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="/Person"
+        android:textColor="@color/darkBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_placePrice"
+        app:layout_constraintStart_toEndOf="@+id/tv_placePrice" />
+
+    <ImageView
+        android:id="@+id/iv_locationIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tv_placePrice"
+        app:layout_constraintStart_toStartOf="@+id/tv_placePrice"
+        app:layout_constraintTop_toBottomOf="@+id/tv_placeTitle"
+        app:srcCompat="@drawable/location" />
+
+    <TextView
+        android:id="@+id/tv_placeAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="address"
+        android:textColor="@color/darkBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_placePrice"
+        app:layout_constraintStart_toEndOf="@+id/iv_locationIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_placeTitle" />
+
+    <TextView
+        android:id="@+id/tv_placeRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="5"
+        android:textColor="@color/darkBlue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_placeImage" />
+
+    <ImageView
+        android:id="@+id/iv_starIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_placeRating"
+        app:layout_constraintEnd_toStartOf="@+id/tv_placeRating"
+        app:layout_constraintTop_toTopOf="@+id/tv_placeRating"
+        app:layout_constraintVertical_bias="0.272"
+        app:srcCompat="@drawable/star" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
